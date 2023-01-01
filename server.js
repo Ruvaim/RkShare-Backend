@@ -17,14 +17,15 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(express.static('public'));
 app.use(express.json());
+app.use(cors());
 connectDB();
 
 //cors
-const corsOptions = {
-  origin: process.env.ALLOWED_CLIENTS.split(','),
-};
+// const corsOptions = {
+//   origin: process.env.ALLOWED_CLIENTS.split(','),
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 //Template engine
 
