@@ -13,7 +13,7 @@ const deleteData = async () => {
         await file.remove();
         console.log(`Successfully deleted ${file.filename}`);
       } catch (error) {
-        console.log(`Error while deleting file ${err}`);
+        console.log(`Error while deleting file ${error}`);
       }
     }
     console.log('Job Done!');

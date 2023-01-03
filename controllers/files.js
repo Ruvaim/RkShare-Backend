@@ -41,7 +41,7 @@ export const postFiles = (req, res) => {
 
     const response = await file.save();
     return res.json({
-      file: `${process.env.APP_BASE_URL}/files/${response.uuid}`,
+      file: `${process.env.APP_BASE_URL}/api/files/${response.uuid}`,
     });
   });
 };
