@@ -49,6 +49,7 @@ export const sendEmail = async (req, res) => {
       emailFrom: emailFrom,
       downloadLink: `${process.env.APP_BASE_URL}/api/files/${response.uuid}`,
       size: parseInt(file.size / 1000) + 'KB',
+      expires: '24 Hours',
     }),
   });
 
