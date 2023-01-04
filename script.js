@@ -9,10 +9,11 @@ const deleteData = async () => {
   if (files.length) {
     for (const file of files) {
       try {
-        fs.unlinkSync(file.path);
+        // fs.unlinkSync(file.path);
         await file.remove();
         console.log(`Successfully deleted ${file.filename}`);
       } catch (error) {
+        // console.log(file.path);
         console.log(`Error while deleting file ${error}`);
       }
     }
