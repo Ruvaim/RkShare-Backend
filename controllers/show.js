@@ -10,7 +10,7 @@ export const showLink = async (req, res) => {
       uuid: file.uuid,
       fileName: file.filename,
       fileSize: file.size,
-      downloadLink: `${process.env.APP_BASE_URL}/api/files/download/${file.uuid}`,
+      downloadLink: `${process.env.APP_BASE_URL}/api/files/${file.uuid}`,
     });
     // return res.status(200).json({
     //   uuid: file.uuid,
